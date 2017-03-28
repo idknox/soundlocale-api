@@ -1,0 +1,12 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: soundlocale
+
+test:
+  <<: *default
+  database: soundlocale_test
