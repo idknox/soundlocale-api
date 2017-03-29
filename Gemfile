@@ -11,6 +11,8 @@ gem 'rails', '~> 5.0.2'
 gem 'puma', '~> 3.0'
 gem 'pg'
 gem 'rack-cors', :require => 'rack/cors'
+gem 'httparty'
+gem 'kaminari'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
@@ -24,6 +26,8 @@ gem 'rack-cors', :require => 'rack/cors'
 
 group :development, :test do
   gem 'byebug', platform: :mri
+  gem 'pry'
+  gem 'dotenv-rails'
 end
 
 group :development do
