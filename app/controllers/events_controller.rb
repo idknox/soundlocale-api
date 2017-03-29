@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
   def index
     events = Event.all
-    render json: events, root: :data
+    render json: events
   end
 end
