@@ -1,5 +1,7 @@
 class Event < ApplicationRecord
 
+  scope :future, -> { where('starts_at > ?', Date.today.beginning_of_day) }
+
   before_save :set_youtube_video_id
 
   def set_youtube_video_id
