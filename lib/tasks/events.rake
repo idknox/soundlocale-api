@@ -2,9 +2,11 @@ namespace :events do
 
   desc "Import events from Songkick"
   task sk: :environment do
+
     count = 0
     events = SongkickService.new.all
     events = events.map { |event| SongkickDataMapper.new(event).mapped_event }
+
     events.each do |event|
       ActiveRecord::Base.transaction do
         event = Event.find_or_initialize_by(event)

@@ -13,6 +13,7 @@ gem 'pg'
 gem 'rack-cors', :require => 'rack/cors'
 gem 'httparty'
 gem 'kaminari'
+gem 'yt', '~> 0.28.0'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
