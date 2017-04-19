@@ -1,7 +1,5 @@
-class SongkickDataMapper
-  def initialize(songkick_data)
-    @data = songkick_data
-  end
+class SongkickEventDataMapper
+  include DataMapperUtils
 
   def mapped_event
     {
@@ -11,14 +9,10 @@ class SongkickDataMapper
       description: "Ages: #{data['ageRestriction'] || 'All'}",
       venue_name: data['venue']['displayName'],
       venue_id: data['venue']['id'],
-      starts_at: data['start']['datetime'] || data['start']['date'],
+      starts_at: "#{data['start']['date']}T#{data['start']['time']}",
       tickets: data['uri'],
       vendor_id: data['id'],
       vendor_url: data['uri']
     }
   end
-
-  private
-
-  attr_reader :data
 end
