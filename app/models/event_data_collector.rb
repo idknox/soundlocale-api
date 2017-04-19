@@ -6,7 +6,7 @@ class EventDataCollector
       name: 'AXS'
     },
     songkick: {
-      service: 'SongkickEventService',
+      service: 'SongkickService',
       data_mapper: '::SongkickEventDataMapper',
       name: 'SONGKICK'
     }
