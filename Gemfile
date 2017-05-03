@@ -12,6 +12,10 @@ gem 'puma', '~> 3.0'
 gem 'pg'
 gem 'rack-cors', :require => 'rack/cors'
 gem 'httparty'
+gem 'devise'
+gem 'doorkeeper'
+gem 'thin'
+
 gem 'yt', '~> 0.28.0'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -32,8 +36,8 @@ end
 
 group :development do
   gem 'listen', '~> 3.0.5'
-  gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
+  # gem 'spring'
+  # gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
