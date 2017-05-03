@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   root to: 'api/sessions#new'
   get '/.well-known/acme-challenge/:id' => 'certs#letsencrypt'
-  
+
   namespace :api do
     get 'me', to: 'users#me'
     resources :events, only: [:index]
